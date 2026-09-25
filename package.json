@@ -1,0 +1,27 @@
+{
+  "name": "arc-usdc-indexer",
+  "version": "1.0.0",
+  "description": "HyperIndex indexer that counts every USDC transfer on Arc (chain 5042) once, from the EIP-7708 system address",
+  "scripts": {
+    "codegen": "envio codegen",
+    "dev": "envio dev",
+    "start": "envio start",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "Envio",
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "dependencies": {
+    "envio": "^3.12.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

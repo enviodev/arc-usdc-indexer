@@ -1,0 +1,15 @@
+type Account {
+  id: ID! # account address
+  # Net USDC movement across the indexed window, 18 decimals. Not a balance.
+  netChange: BigInt!
+  transfersIn: Int!
+  transfersOut: Int!
+}
+
+type DailyStat {
+  id: ID! # day index
+  transfers: Int!
+  volume: BigInt!
+  mints: Int!
+  burns: Int!
+}

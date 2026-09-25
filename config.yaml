@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: arc-usdc-indexer
+description: Every USDC transfer on Arc (chain 5042)
+
+contracts:
+  # Arc's system address logs a standard Transfer for every USDC movement,
+  # with values in 18 decimals. It is not a deployed contract.
+  - name: NativeUSDC
+    events:
+      - event: "Transfer(address indexed from, address indexed to, uint256 value)"
+
+chains:
+  - id: 5042 # Arc. HyperSync is the default data source.
+    start_block: 22477236 # the first block of our sample. Use a recent block.
+    contracts:
+      - name: NativeUSDC
+        address: "0xffffFFFfFFffffffffffffffFfFFFfffFFFfFFfE"
