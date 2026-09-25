@@ -25,7 +25,7 @@ pnpm codegen
 pnpm dev
 ```
 
-A GraphQL playground opens on http://localhost:8080.
+The Hasura console opens on http://localhost:8080, and the local admin secret is `testing`.
 
 `config.yaml` starts at block `22477236`, the first block of the blog's sample. For a quick run on
 current data, set `start_block` to about 100,000 blocks below the height from
